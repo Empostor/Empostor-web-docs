@@ -55,7 +55,7 @@ Open the address of your server in a web browser, it should show you a small pag
 
 ## My question is not yet answered and I'm still having problems!
 
-That's unfortunate. Join the [Empostor Discord](https://discord.gg/uSDzWdmN98), ask your question there and we'll try to help you out. Note that we're not always available, so it may take some time to get an answer. To make answering your question easier, please add the following details:
+That's unfortunate. Join the [Empostor Discord](https://dsc.gg/empostor), ask your question there and we'll try to help you out. Note that we're not always available, so it may take some time to get an answer. To make answering your question easier, please add the following details:
 
 - Which version of Empostor are you using?
 - Which version or Among Us are you using?
