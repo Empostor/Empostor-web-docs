@@ -32,7 +32,7 @@ function parseForm() {
     const protocol = protocolSelect.value;
     const address = addressInput.value.trim();
     const port = parseInt(portInput.value) || (protocol === "http" ? DEFAULT_PORT_HTTP : DEFAULT_PORT_HTTPS);
-    const name = nameInput.value || "Impostor";
+    const name = nameInput.value || "Empostor";
 
     return { protocol, address, port, name, url: `${protocol}://${address}` };
 }

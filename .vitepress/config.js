@@ -14,7 +14,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Impostor Tool', link: '/impostor/' },
+      { text: 'Empostor Tool', link: '/empostor/' },
       { text: 'GitHub', link: 'https://github.com/Empostor/Empostor' }
     ],
 
