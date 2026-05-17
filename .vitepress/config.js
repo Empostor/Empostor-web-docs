@@ -4,6 +4,9 @@ export default defineConfig({
   title: 'Empostor',
   description: 'Among Us Private Server Documentation',
 
+  // GitHub Pages project site — served from /Empostor-web-docs/ subpath
+  base: '/Empostor-web-docs/',
+
   // Clean URLs without .html extension
   cleanUrls: true,
 
