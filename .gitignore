@@ -431,4 +431,3 @@ FodyWeavers.xsd
 # VitePress
 .vitepress/dist/
 .vitepress/cache/
-pnpm-lock.yaml
