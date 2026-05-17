@@ -427,3 +427,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# VitePress
+.vitepress/dist/
+.vitepress/cache/
+pnpm-lock.yaml
