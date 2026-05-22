@@ -28,7 +28,7 @@ Add the `DiscordWebhook` section to your `config.json`:
 | **WebhookUrl** | `""` | The Discord webhook URL to POST messages to. Create one in Discord under Channel Settings → Integrations → Webhooks. |
 | **NotifyOnGameCreated** | `true` | Send a notification when a new game lobby is created. |
 | **NotifyOnBan** | `true` | Send a notification when a player is banned from the server. |
-| **NotifyOnReport** | `true` | Send a notification when a player reports a dead body in-game. |
+| **NotifyOnReport** | `true` | Send a notification when a player reports other players for some reasons. |
 | **NotifyOnPlayerJoin** | `false` | Send a notification when a player joins a game lobby. |
 | **NotifyOnGameEnded** | `false` | Send a notification when a game ends. |
 
