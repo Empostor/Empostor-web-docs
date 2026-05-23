@@ -18,7 +18,7 @@
 
 你的游戏版本太新，当前 Empostor 不支持。
 
-如果使用 Empostor 正式版，检查是否有支持你游戏版本的新版本。如果没有，可以尝试[最新的 CI 构建](https://nightly.link/Empostor/Empostor/workflows/ci/master)。
+如果使用 Empostor 正式版，检查是否有支持你游戏版本的新版本。如果没有，可以尝试[最新的 CI 构建](https://nightly.link/Empostor/Empostor/workflows/ci/main)。
 
 如果最新构建也不行，可以查看 Pull Requests 是否有待合并的版本更新 PR，但注意这些可能不稳定或包含恶意代码。
 
@@ -30,7 +30,7 @@
 
 你使用的 Empostor 版本不是为你当前的游戏版本设计的。游戏不会真正检查谁过期了，会把问题归咎于用户。较新版本（v1.5.0+）会正确警告并发送正确的消息。
 
-查看主菜单左上角的游戏版本，然后下载对应该版本的 Empostor。每个[发布版本](https://github.com/Empostor/Empostor/releases)都标明兼容的游戏版本。如果游戏版本比最新发布版还新，试试[最新 CI 构建](https://nightly.link/Empostor/Empostor/workflows/ci/master)。
+查看主菜单左上角的游戏版本，然后下载对应该版本的 Empostor。每个[发布版本](https://github.com/Empostor/Empostor/releases)都标明兼容的游戏版本。如果游戏版本比最新发布版还新，试试[最新 CI 构建](https://nightly.link/Empostor/Empostor/workflows/ci/main)。
 
 ## 断开连接并提示 `You disconnected from the server. Reliable Packet 1 ...`
 

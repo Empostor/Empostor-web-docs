@@ -22,7 +22,7 @@ You can solve this by doing: `chmod +x Empostor.Server`
 
 This happens when your game is too new for your copy of Empostor to support.
 
-If you're using an Empostor release, check if there is a newer release available that supports your version. If this doesn't exist, you can try the [latest build from CI](https://nightly.link/Empostor/Empostor/workflows/ci/master).
+If you're using an Empostor release, check if there is a newer release available that supports your version. If this doesn't exist, you can try the [latest build from CI](https://nightly.link/Empostor/Empostor/workflows/ci/main).
 
 If even that build doesn't work, you can try looking through the Pull Requests to see if there is a pending pull request that aims to update it to the next version, but note these may be unstable and may contain malicious code, as they haven't been vetted by the Empostor development team yet.
 
@@ -34,7 +34,7 @@ This happens when you're using a version of Empostor that is too new for your ga
 
 You are using a version of Empostor that is not designed for the version of the game you're playing. The game does not really check who is outdated and blames it on the user. Newer versions (v1.5.0+) do warn correctly and send the correct message.
 
-Look at which version of the game you're playing, which you can see in the top left corner of the main menu, then download an Empostor version for that game. Every [release on the release page](https://github.com/Empostor/Empostor/releases) shows which version of the game it is compatible with. If your game version is newer than the latest release, check if the [latest build from CI works](https://nightly.link/Empostor/Empostor/workflows/ci/master).
+Look at which version of the game you're playing, which you can see in the top left corner of the main menu, then download an Empostor version for that game. Every [release on the release page](https://github.com/Empostor/Empostor/releases) shows which version of the game it is compatible with. If your game version is newer than the latest release, check if the [latest build from CI works](https://nightly.link/Empostor/Empostor/workflows/ci/main).
 
 ## Disconnected with `You disconnected from the server. Reliable Packet 1 ...`
 
