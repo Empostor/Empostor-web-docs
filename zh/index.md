@@ -10,6 +10,9 @@ hero:
       text: 快速开始
       link: /zh/Running-the-server
     - theme: alt
+      text: 关于项目
+      link: /zh/About
+    - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/Empostor/Empostor
 

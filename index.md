@@ -10,6 +10,9 @@ hero:
       text: Get Started
       link: /Running-the-server
     - theme: alt
+      text: About
+      link: /About
+    - theme: alt
       text: View on GitHub
       link: https://github.com/Empostor/Empostor
 
