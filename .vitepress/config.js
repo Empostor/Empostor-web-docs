@@ -8,6 +8,10 @@ export default defineConfig({
 
   cleanUrls: true,
 
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }]
+  ],
+
   locales: {
     root: {
       label: 'English',
