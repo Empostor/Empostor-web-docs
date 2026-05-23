@@ -63,7 +63,8 @@ export default defineConfig({
             text: 'Development',
             items: [
               { text: 'Writing a Plugin', link: '/Writing-a-plugin' },
-              { text: 'Hello Page', link: '/Hello-page' }
+              { text: 'Hello Page', link: '/Hello-page' },
+              { text: 'About', link: '/About' }
             ]
           }
         ],
@@ -73,8 +74,8 @@ export default defineConfig({
         ],
 
         footer: {
-          message: 'Empostor — An Among Us private server implementation',
-          copyright: 'Licensed under GPL-3.0'
+          message: '<a href="https://dsc.gg/empostor" target="_blank">Discord</a> | <a href="https://qm.qq.com/q/GeX3Q0Ft0k" target="_blank">QQ 群</a> | <a href="https://github.com/Empostor/Empostor" target="_blank">GitHub</a>',
+          copyright: 'Empostor ©2026'
         }
       }
     },
@@ -133,7 +134,8 @@ export default defineConfig({
             text: '开发',
             items: [
               { text: '编写插件', link: '/zh/Writing-a-plugin' },
-              { text: 'Hello 页面', link: '/zh/Hello-page' }
+              { text: 'Hello 页面', link: '/zh/Hello-page' },
+              { text: '关于项目', link: '/zh/About' }
             ]
           }
         ],
@@ -143,8 +145,8 @@ export default defineConfig({
         ],
 
         footer: {
-          message: 'Empostor — Among Us 私服实现',
-          copyright: '基于 GPL-3.0 许可'
+          message: '<a href="https://dsc.gg/empostor" target="_blank">Discord</a> | <a href="https://qm.qq.com/q/GeX3Q0Ft0k" target="_blank">QQ 群</a> | <a href="https://github.com/Empostor/Empostor" target="_blank">GitHub</a>',
+          copyright: 'Empostor ©2026'
         }
       }
     }
