@@ -19,7 +19,7 @@ Among Us 使用两种网络服务连接服务器：(TCP) HTTP 服务将 Among Us
 ## 正常安装
 
 1. 安装 [.NET 8.0](https://dotnet.microsoft.com/download/dotnet/8.0)。推荐使用 ASP.NET Core Runtime 或 SDK。如果需要开发 Empostor 或插件，则必须安装 SDK。
-2. 下载[最新版本](https://github.com/HayashiUme/Empostor/releases)或[最新 CI 构建](https://nightly.link/HayashiUme/Empostor/workflows/ci/master)。注意 Empostor 为多种 CPU 架构和操作系统构建，通常需要 x64 版本，除非在树莓派或其他 ARM 处理器的设备上运行。
+2. 下载[最新版本](https://github.com/Empostor/Empostor/releases)或[最新 CI 构建](https://nightly.link/Empostor/Empostor/workflows/ci/master)。注意 Empostor 为多种 CPU 架构和操作系统构建，通常需要 x64 版本，除非在树莓派或其他 ARM 处理器的设备上运行。
 3. 解压 zip 文件。
 4. 根据需求修改 `config.json`。文档参见[服务器配置](Server-configuration.md)。至少需要将 `PublicIp` 改为玩家连接服务器所使用的地址。
 5. 运行 `Empostor.Server`（Linux/macOS）或 `Empostor.Server.exe`（Windows）

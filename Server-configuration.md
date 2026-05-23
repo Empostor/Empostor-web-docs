@@ -66,7 +66,7 @@ The `Admin` configuration is used to set the admin password and plugin marketpla
 | Key | Default | Description |
 | :--- | :--- | :--- |
 | Password | `CHANGE-ME` | The admin password for the server, used for authentication. Make sure to change this to a strong, complex password. |
-| MarketplaceUrl | `https://raw.githubusercontent.com/HayashiUme/Empostor/main/marketplace/plugins.json` | A URL pointing to a `plugins.json` file. This file defines the list of plugins available in the plugin marketplace. |
+| MarketplaceUrl | `https://raw.githubusercontent.com/Empostor/Empostor/main/marketplace/plugins.json` | A URL pointing to a `plugins.json` file. This file defines the list of plugins available in the plugin marketplace. |
 
 ### DiscordWebhook
 
@@ -175,7 +175,7 @@ Modify the following template to your needs and populate the service file.
 
 ```
 [Unit]
-Description=Empostor private Among Us server - https://github.com/HayashiUme/Empostor
+Description=Empostor private Among Us server - https://github.com/Empostor/Empostor
 
 [Service]
 # Directory where Empostor is installed
