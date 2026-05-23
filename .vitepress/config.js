@@ -19,7 +19,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Empostor Tool', link: 'https://empostor.github.io/Empostor' },
+          { text: 'Empostor Tool', link: '/empostor/' },
           { text: 'GitHub', link: 'https://github.com/Empostor/Empostor' }
         ],
 
@@ -90,7 +90,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '首页', link: '/zh/' },
-          { text: 'Empostor Tool', link: 'https://empostor.github.io/Empostor' },
+          { text: 'Empostor Tool', link: '/empostor/' },
           { text: 'GitHub', link: 'https://github.com/Empostor/Empostor' }
         ],
 
