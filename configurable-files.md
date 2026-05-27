@@ -199,7 +199,7 @@ See [Writing a Plugin](Writing-a-plugin.md#internationalization-i18n) for code-l
 **Location:** `marketplace/plugins.json` (or a remote URL configured in `Admin.MarketplaceUrl`)
 **Format:** JSON array
 
-Defines the plugins available in the admin panel's Plugin Marketplace. See [Plugin Marketplace](Plugin-marketplace.md) for the complete format reference.
+Defines the plugins available in the admin panel's Plugin Marketplace. See [Plugin Marketplace](Admin-panel.md#plugin-marketplace) for the complete format reference.
 
 ```json
 [

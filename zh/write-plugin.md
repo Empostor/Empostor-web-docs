@@ -45,7 +45,7 @@ Empostor 附带多个演示插件 API 的插件：
 
 ## 插件市场
 
-**[插件市场](Plugin-marketplace.md)** 允许服务器管理员从管理面板浏览和安装插件。了解 `plugins.json` 格式以发布你自己的插件：
+**[插件市场](Admin-panel.md#插件市场)** 允许服务器管理员从管理面板浏览和安装插件。了解 `plugins.json` 格式以发布你自己的插件：
 
 - 插件元数据（id、name、description、author）
 - 带下载 URL 的版本历史

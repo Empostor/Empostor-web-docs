@@ -84,7 +84,7 @@ Send game events to a Discord channel via webhooks. See [Discord Webhook](Discor
 
 ### PlayerStats
 
-Track per-player game statistics viewable in the admin panel and via `/stat` command. See [Player Statistics](Player-statistics.md) for details.
+Track per-player game statistics viewable in the admin panel and via `/stat` command. See [Statistics](Admin-panel.md#statistics) for details.
 
 | Key | Default | Description |
 | :--- | :--- | :--- |
@@ -93,7 +93,7 @@ Track per-player game statistics viewable in the admin panel and via `/stat` com
 
 ### ChatFilter
 
-Filter in-game chat for blocked words and rate-limit spam. See [Chat Filtering](Chat-filtering.md) for details.
+Filter in-game chat for blocked words and rate-limit spam. See [Chat Filter](Admin-panel.md#chat-filter) for details.
 
 | Key | Default | Description |
 | :--- | :--- | :--- |

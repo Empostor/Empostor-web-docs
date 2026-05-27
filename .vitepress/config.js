@@ -34,10 +34,10 @@ export default defineConfig({
               { text: 'HTTP Server (Reverse Proxy)', link: '/Http-server' },
               { text: 'Upgrading', link: '/Upgrading' },
               { text: 'Admin Panel', link: '/Admin-panel' },
-              { text: 'Chat Filtering', link: '/Chat-filtering' },
+              { text: 'Chat Filter', link: '/Admin-panel#chat-filter' },
               { text: 'Discord Webhook', link: '/Discord-webhook' },
-              { text: 'Player Statistics', link: '/Player-statistics' },
-              { text: 'Plugin Marketplace', link: '/Plugin-marketplace' },
+              { text: 'Statistics', link: '/Admin-panel#statistics' },
+              { text: 'Plugin Marketplace', link: '/Admin-panel#plugin-marketplace' },
               { text: 'FAQ', link: '/FAQ' },
               { text: 'Troubleshooting', link: '/TROUBLESHOOTING' }
             ]
@@ -111,10 +111,10 @@ export default defineConfig({
               { text: 'HTTP 服务器 (反向代理)', link: '/zh/Http-server' },
               { text: '升级指南', link: '/zh/Upgrading' },
               { text: '管理面板', link: '/zh/Admin-panel' },
-              { text: '聊天过滤', link: '/zh/Chat-filtering' },
+              { text: '聊天过滤', link: '/zh/Admin-panel#聊天过滤' },
               { text: 'Discord 通知', link: '/zh/Discord-webhook' },
-              { text: '玩家统计', link: '/zh/Player-statistics' },
-              { text: '插件市场', link: '/zh/Plugin-marketplace' },
+              { text: '统计', link: '/zh/Admin-panel#统计' },
+              { text: '插件市场', link: '/zh/Admin-panel#插件市场' },
               { text: '常见问题', link: '/zh/FAQ' },
               { text: '故障排除', link: '/zh/TROUBLESHOOTING' }
             ]

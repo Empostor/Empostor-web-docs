@@ -80,7 +80,112 @@ Empostor 内置基于 Web 的管理面板，可通过 `http://your-server:22023/
 
 ---
 
-## 广播
+## 统计
+
+在 `config.json` 中启用后，管理面板会显示**统计**标签页，按游戏场次排名展示每位玩家的游戏数据。使用**刷新**重新加载数据，使用**全部重置**清除所有统计（需要确认）。
+
+玩家也可以在游戏内输入 `/stat`（或 `/stats`、`/mystats`）查看自己的统计。回复以私密方式发送，并根据玩家语言进行本地化。
+
+### 配置
+
+```json
+{
+  "PlayerStats": {
+    "Enabled": false,
+    "PersistToFile": true
+  }
+}
+```
+
+| 键 | 默认值 | 描述 |
+| :--- | :--- | :--- |
+| **Enabled** | `false` | 是否启用玩家统计追踪。 |
+| **PersistToFile** | `true` | 将统计数据保存到磁盘上的 `player_stats.json`。如果为 `false`，统计数据仅保存在内存中，重启后丢失。 |
+
+### 追踪的指标
+
+| 统计项 | 描述 |
+| :--- | :--- |
+| 游戏场次 | 参与的游戏总场次 |
+| 胜场 | 作为船员获胜的场次 |
+| 败场 | 作为船员失败的场次 |
+| 内鬼胜场 | 作为内鬼获胜的场次 |
+| 击杀 | 总击杀数 |
+| 死亡 | 总死亡次数 |
+| 完成任务 | 完成的任务总数 |
+| 被投票出局 | 被投票出局的次数 |
+
+### API 端点
+
+| 方法 | 路径 | 描述 |
+| :--- | :--- | :--- |
+| `GET` | `/api/admin/player/stats` | 返回所有玩家统计数据，按游戏场次排序 |
+| `GET` | `/api/admin/player/stats/{friendCode}` | 返回单个玩家的统计数据 |
+| `POST` | `/api/admin/player/stats/reset` | 清除所有玩家统计数据（需要认证） |
+
+---
+
+## 聊天过滤
+
+管理面板中的**聊天过滤**标签页可在运行时管理词汇过滤和垃圾消息防护，无需编辑 `config.json` 或重启。更改立即生效但仅限运行时——如需永久设置，请编辑 `config.json`。
+
+该标签页提供：
+- 启用/禁用过滤复选框
+- 添加/移除屏蔽词
+- 垃圾消息阈值和时间窗口控制
+- 拦截/记录切换（拦截消息或仅记录警告）
+
+### 配置
+
+```json
+{
+  "ChatFilter": {
+    "Enabled": false,
+    "BlockedWords": [],
+    "BlockMessage": true,
+    "SpamThreshold": 5,
+    "SpamWindowSeconds": 10
+  }
+}
+```
+
+| 键 | 默认值 | 描述 |
+| :--- | :--- | :--- |
+| **Enabled** | `false` | 是否启用聊天过滤。 |
+| **BlockedWords** | `[]` | 要屏蔽的词汇。不区分大小写的子串匹配（例如 `"bad"` 也会屏蔽 `"badword"`）。 |
+| **BlockMessage** | `true` | 为 `true` 时取消消息。为 `false` 时消息通过但记录警告。 |
+| **SpamThreshold** | `5` | 在垃圾消息窗口内允许的消息数量，超过后触发频率限制。 |
+| **SpamWindowSeconds** | `10` | 检测垃圾消息的滑动时间窗口（秒）。 |
+
+### 工作原理
+
+**词汇过滤：** 每条聊天消息都会与 `BlockedWords` 进行不区分大小写的子串匹配。如果找到匹配，根据 `BlockMessage` 处理消息。
+
+**垃圾消息过滤：** 每个玩家有独立的滑动窗口。如果在 `SpamWindowSeconds` 秒内发送了 `SpamThreshold` 条或更多消息，根据 `BlockMessage` 处理该消息。超出窗口的旧时间戳会自动丢弃。
+
+两个过滤器独立运行——消息可能被任意一个拦截。
+
+::: warning 短词汇注意
+子串匹配意味着 `"ass"` 这样的短词会匹配 `"pass"` 和 `"classic"`。请使用更具体、更长的词汇以避免误拦截。
+:::
+
+### 示例
+
+屏蔽不当词汇并限制每 5 秒最多 3 条消息：
+
+```json
+{
+  "ChatFilter": {
+    "Enabled": true,
+    "BlockedWords": ["badword1", "badword2"],
+    "BlockMessage": true,
+    "SpamThreshold": 3,
+    "SpamWindowSeconds": 5
+  }
+}
+```
+
+---
 
 以每个游戏房主的身份向所有活跃游戏发送聊天消息。消息前缀为 `[Server]`。
 
@@ -147,6 +252,49 @@ Empostor 内置基于 Web 的管理面板，可通过 `http://your-server:22023/
 点击**安装**将 `.dll` 下载到 `plugins/` 文件夹。安装插件后必须重启服务器才能加载。
 
 如果插件是为不同 Empostor 版本构建的，会显示警告但不阻止安装。
+
+### plugins.json 格式
+
+市场读取 `plugins.json` 文件（本地或远程 URL）：
+
+```jsonc
+[
+  {
+    // 唯一插件标识符（推荐反向域名风格）
+    "id": "cn.hayashiume.welcome",
+
+    // 市场中显示的插件名称
+    "name": "欢迎消息",
+
+    // 简短描述（作为副标题显示）
+    "description": "玩家加入房间时发送本地化的欢迎消息。",
+
+    // 作者署名
+    "author": "BunchHanpiDev & HayashiUme",
+
+    // 版本历史 — 最新版本放在数组最后
+    "versions": [
+      {
+        // 此插件版本的语义版本号
+        "version": "1.0.0",
+
+        // 所需的最低 Empostor 版本
+        "empostor_version": "2.0.0",
+
+        // .dll 文件的直接下载 URL
+        "download_url": "https://raw.githubusercontent.com/Empostor/Empostor/master/marketplace/Empostor.Plugins.Welcome.dll"
+      }
+    ]
+  }
+]
+```
+
+**版本规则：**
+- `versions` 中的**最后一项**被视为最新版本，在界面中默认选中。
+- **单版本**插件：一个条目有效，版本下拉菜单隐藏。
+- **多版本**插件：两个或更多条目时显示 `<select>` 下拉菜单供操作员选择。
+- `download_url` 必须直接指向编译好的 `.dll` 文件。
+- 管理面板读取 `GET /api/admin/marketplace/plugins` — 列表更改无需重启，但安装插件后需要重启。
 
 ---
 

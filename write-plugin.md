@@ -45,7 +45,7 @@ Empostor ships with several plugins that demonstrate the plugin API:
 
 ## Plugin Marketplace
 
-The **[Plugin Marketplace](Plugin-marketplace.md)** allows server admins to browse and install plugins from the admin panel. Learn the `plugins.json` format to publish your own plugins:
+The **[Plugin Marketplace](Admin-panel.md#plugin-marketplace)** allows server admins to browse and install plugins from the admin panel. Learn the `plugins.json` format to publish your own plugins:
 
 - Plugin metadata (id, name, description, author)
 - Version history with download URLs

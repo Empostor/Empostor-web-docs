@@ -42,7 +42,7 @@ The **[Admin Panel](Admin-panel.md)** is a built-in web interface at `http://you
 
 ### Chat Filtering
 
-**[Chat Filtering](Chat-filtering.md)** provides built-in moderation for in-game chat. Configure blocked words, toggle between blocking and logging, and set spam rate limits.
+**[Chat Filter](Admin-panel.md#chat-filter)** provides built-in moderation for in-game chat. Configure blocked words, toggle between blocking and logging, and set spam rate limits — all from the admin panel.
 
 ### Discord Webhook
 
@@ -50,11 +50,11 @@ The **[Admin Panel](Admin-panel.md)** is a built-in web interface at `http://you
 
 ### Player Statistics
 
-**[Player Statistics](Player-statistics.md)** tracks per-player game data: wins, losses, impostor wins, kills, deaths, tasks completed, and more. Viewable in the admin panel and via `/stat` command.
+**[Statistics](Admin-panel.md#statistics)** tracks per-player game data: wins, losses, impostor wins, kills, deaths, tasks completed, and more. Viewable in the admin panel and via `/stat` command.
 
 ### Plugin Marketplace
 
-The **[Plugin Marketplace](Plugin-marketplace.md)** lets admins browse and install community plugins from the admin panel. Plugins are defined in a `plugins.json` file — see the format reference for details.
+The **[Plugin Marketplace](Admin-panel.md#plugin-marketplace)** lets admins browse and install community plugins from the admin panel. Plugins are defined in a `plugins.json` file — see the format reference for details.
 
 ---
 

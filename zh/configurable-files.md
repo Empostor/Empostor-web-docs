@@ -199,7 +199,7 @@ ja:      👋 ようこそ、{Name}！フレンドコード：{FriendCode} | ル
 **位置：** `marketplace/plugins.json`（或在 `Admin.MarketplaceUrl` 中配置的远程 URL）
 **格式：** JSON 数组
 
-定义管理面板插件市场中可用的插件。完整格式参考请参阅[插件市场](Plugin-marketplace.md)。
+定义管理面板插件市场中可用的插件。完整格式参考请参阅[插件市场](Admin-panel.md#插件市场)。
 
 ```json
 [
