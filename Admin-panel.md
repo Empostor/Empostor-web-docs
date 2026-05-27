@@ -17,6 +17,8 @@ On first visit the login page is shown. After a successful login a session cooki
 
 All API endpoints under `/api/admin/` return `401 Unauthorized` if the cookie is absent or incorrect.
 
+![Admin Panel Login](/images/login_panel.png)
+
 ---
 
 ## Overview
@@ -30,6 +32,8 @@ The main dashboard shows at a glance:
 - Server uptime
 
 A live game list is displayed below the stat cards, refreshing every 3 seconds.
+
+![Admin Panel Overview](/images/overview_panel.png)
 
 ---
 
@@ -65,6 +69,14 @@ Clicking **Detail** on any client row opens a side panel showing:
 - Full player identity (name, friend code, PUID, IP, client version, language, platform)
 - Current game code
 - Reactor protocol version and full mod list (mod ID, version, required flag)
+
+---
+
+## Player Logs
+
+![Player Logs](/images/player_logs.png)
+
+Browse per-player activity logs. Filter by player and event type, and export data as JSON. Useful for auditing player behavior and investigating reports.
 
 ---
 

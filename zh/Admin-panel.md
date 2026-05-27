@@ -17,6 +17,8 @@ Empostor 内置基于 Web 的管理面板，可通过 `http://your-server:22023/
 
 所有 `/api/admin/` 下的 API 端点在 Cookie 缺失或错误时返回 `401 Unauthorized`。
 
+![管理面板登录](/images/login_panel.png)
+
 ---
 
 ## 概览
@@ -30,6 +32,8 @@ Empostor 内置基于 Web 的管理面板，可通过 `http://your-server:22023/
 - 服务器运行时间
 
 统计卡片下方显示实时游戏列表，每 3 秒刷新一次。
+
+![管理面板概览](/images/overview_panel.png)
 
 ---
 
@@ -65,6 +69,14 @@ Empostor 内置基于 Web 的管理面板，可通过 `http://your-server:22023/
 - 完整玩家身份（名称、好友代码、PUID、IP、客户端版本、语言、平台）
 - 当前游戏代码
 - Reactor 协议版本和完整模组列表（模组 ID、版本、是否必需标记）
+
+---
+
+## 玩家日志
+
+![玩家日志](/images/player_logs.png)
+
+浏览每个玩家的活动日志。可按玩家和事件类型筛选，并导出为 JSON 数据。适用于审计玩家行为和调查举报。
 
 ---
 
