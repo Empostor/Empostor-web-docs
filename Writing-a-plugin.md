@@ -320,6 +320,84 @@ It is important to use the correct versions when working with `Empostor.Api` pre
 
 The prerelease `Empostor.Api` package `1.2.0-ci.54` belongs to build `54` on AppVeyor, which can be found here https://ci.appveyor.com/project/Empostor/Empostor/build/54. Notice the `54` on the end of the url.
 
+### Internationalization (i18n)
+
+Empostor supports translating plugin strings into multiple languages via the `IPluginLanguageProvider` interface. Implement it on your plugin class to provide translations for commands, notifications, and other user-facing text.
+
+```csharp
+[EmpostorPlugin("com.example.myplugin")]
+public sealed class MyPlugin : PluginBase, IPluginLanguageProvider
+{
+    public IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> GetTranslations()
+    {
+        return new Dictionary<string, IReadOnlyDictionary<string, string>>
+        {
+            ["en"] = new Dictionary<string, string>
+            {
+                ["myplugin.hello"] = "Hello, {0}!",
+                ["myplugin.goodbye"] = "Goodbye!",
+            },
+            ["zh_CN"] = new Dictionary<string, string>
+            {
+                ["myplugin.hello"] = "你好，{0}！",
+                ["myplugin.goodbye"] = "再见！",
+            },
+        };
+    }
+}
+```
+
+**Supported language codes:**
+
+| Code | Language |
+|---|---|
+| `en` | English |
+| `zh_CN` | Simplified Chinese |
+| `zh_TW` | Traditional Chinese |
+| `ko` | Korean |
+| `ru` | Russian |
+| `de` | German |
+| `fr` | French |
+| `ja` | Japanese |
+| `pt` | Portuguese |
+| `pt_BR` | Brazilian Portuguese |
+| `es` | Spanish |
+| `it` | Italian |
+| `nl` | Dutch |
+| `fil` | Filipino |
+| `ga` | Irish |
+
+**Using translations in commands:**
+
+```csharp
+public async ValueTask<bool> ExecuteAsync(CommandContext ctx)
+{
+    string msg = ctx.Lang.Get("myplugin.hello", ctx.SenderLanguage)
+        .Replace("{0}", ctx.Sender.Client.Name);
+
+    await ctx.PlayerControl.SendChatToPlayerAsync(msg, ctx.PlayerControl);
+}
+```
+
+**LanguageString API:**
+
+```csharp
+var str = ctx.Lang.Get("key", lang);
+
+str.Replace("{Name}", value)              // replace single placeholder
+str.ReplaceAll(("{0}", a), ("{1}", b))    // replace multiple
+str.Format(args)                          // string.Format style
+str.Get()                                 // get raw string
+```
+
+**Best practices:**
+- Always provide an English (`en`) fallback — it's used when a player's language is not found.
+- Namespace your translation keys: `pluginname.key_name`.
+- Use `{0}`, `{1}` for positional placeholders.
+- Register `IPluginLanguageProvider` on your plugin class — translations are auto-loaded at startup.
+
+For text-file-based messages (like the Welcome plugin's `HelloWorld.txt`), see [Configurable Files](configurable-files.md#messages-helloworld-txt).
+
 ## 9. Missing/invalid data or want more functions?
 
 The `Empostor.Api` is currently in beta. There are a lot of things still missing and we would like to hear from you what you need to develop a plugin.

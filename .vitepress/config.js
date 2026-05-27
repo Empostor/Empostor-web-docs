@@ -25,29 +25,39 @@ export default defineConfig({
 
         sidebar: [
           {
-            text: 'Getting Started',
+            text: 'Configure Server',
+            link: '/configure-server',
             items: [
               { text: 'Running the Server', link: '/Running-the-server' },
               { text: 'Server Configuration', link: '/Server-configuration' },
               { text: 'Building from Source', link: '/Building-from-source' },
               { text: 'HTTP Server (Reverse Proxy)', link: '/Http-server' },
               { text: 'Upgrading', link: '/Upgrading' },
+              { text: 'Admin Panel', link: '/Admin-panel' },
+              { text: 'Chat Filtering', link: '/Chat-filtering' },
+              { text: 'Discord Webhook', link: '/Discord-webhook' },
+              { text: 'Player Statistics', link: '/Player-statistics' },
+              { text: 'Plugin Marketplace', link: '/Plugin-marketplace' },
               { text: 'FAQ', link: '/FAQ' },
               { text: 'Troubleshooting', link: '/TROUBLESHOOTING' }
             ]
           },
           {
-            text: 'Features',
+            text: 'Write Plugin',
+            link: '/write-plugin',
             items: [
-              { text: 'Admin Panel', link: '/Admin-panel' },
-              { text: 'Chat Filtering', link: '/Chat-filtering' },
-              { text: 'Discord Webhook', link: '/Discord-webhook' },
-              { text: 'Player Statistics', link: '/Player-statistics' },
-              { text: 'Plugin Marketplace', link: '/Plugin-marketplace' }
+              { text: 'Writing a Plugin', link: '/Writing-a-plugin' },
+              { text: 'Hello Page', link: '/Hello-page' },
+              { text: 'Boot.Codes', link: '/Boot-code' },
+              { text: 'Message (Leave a Message)', link: '/Message-plugin' },
+              { text: 'Player Channel', link: '/Player-channel-plugin' },
+              { text: 'Chat Manager', link: '/Chat-plugin' },
+              { text: 'About', link: '/About' }
             ]
           },
           {
             text: 'API Reference',
+            link: '/api-reference',
             items: [
               { text: 'Server Monitoring', link: '/Server-monitoring' },
               { text: 'Privacy Policy API', link: '/Privacy-api' },
@@ -55,20 +65,16 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Plugins',
+            text: 'Configurable Files',
+            link: '/configurable-files',
             items: [
-              { text: 'Boot.Codes', link: '/Boot-code' },
-              { text: 'Message (Leave a Message)', link: '/Message-plugin' },
-              { text: 'Player Channel', link: '/Player-channel-plugin' },
-              { text: 'Chat Manager', link: '/Chat-plugin' }
-            ]
-          },
-          {
-            text: 'Development',
-            items: [
-              { text: 'Writing a Plugin', link: '/Writing-a-plugin' },
-              { text: 'Hello Page', link: '/Hello-page' },
-              { text: 'About', link: '/About' }
+              { text: 'config.json', link: '/Server-configuration' },
+              { text: 'AdminStrings.json', link: '/configurable-files#adminstrings-json' },
+              { text: 'Pages/index.html', link: '/configurable-files#pages-index-html-hello-page' },
+              { text: 'Messages/HelloWorld.txt', link: '/configurable-files#messages-helloworld-txt' },
+              { text: 'marketplace/plugins.json', link: '/configurable-files#marketplace-plugins-json' },
+              { text: 'bans.json', link: '/configurable-files#bans-json' },
+              { text: 'player_stats.json', link: '/configurable-files#player-stats-json' }
             ]
           }
         ],
@@ -96,29 +102,39 @@ export default defineConfig({
 
         sidebar: [
           {
-            text: '入门指南',
+            text: '配置服务器',
+            link: '/zh/configure-server',
             items: [
               { text: '运行服务器', link: '/zh/Running-the-server' },
               { text: '服务器配置', link: '/zh/Server-configuration' },
               { text: '从源码构建', link: '/zh/Building-from-source' },
               { text: 'HTTP 服务器 (反向代理)', link: '/zh/Http-server' },
               { text: '升级指南', link: '/zh/Upgrading' },
+              { text: '管理面板', link: '/zh/Admin-panel' },
+              { text: '聊天过滤', link: '/zh/Chat-filtering' },
+              { text: 'Discord 通知', link: '/zh/Discord-webhook' },
+              { text: '玩家统计', link: '/zh/Player-statistics' },
+              { text: '插件市场', link: '/zh/Plugin-marketplace' },
               { text: '常见问题', link: '/zh/FAQ' },
               { text: '故障排除', link: '/zh/TROUBLESHOOTING' }
             ]
           },
           {
-            text: '功能特性',
+            text: '编写插件',
+            link: '/zh/write-plugin',
             items: [
-              { text: '管理面板', link: '/zh/Admin-panel' },
-              { text: '聊天过滤', link: '/zh/Chat-filtering' },
-              { text: 'Discord 通知', link: '/zh/Discord-webhook' },
-              { text: '玩家统计', link: '/zh/Player-statistics' },
-              { text: '插件市场', link: '/zh/Plugin-marketplace' }
+              { text: '编写插件', link: '/zh/Writing-a-plugin' },
+              { text: 'Hello 页面', link: '/zh/Hello-page' },
+              { text: 'Boot.Codes', link: '/zh/Boot-code' },
+              { text: '留言系统', link: '/zh/Message-plugin' },
+              { text: '玩家频道', link: '/zh/Player-channel-plugin' },
+              { text: '聊天管理', link: '/zh/Chat-plugin' },
+              { text: '关于项目', link: '/zh/About' }
             ]
           },
           {
-            text: 'API 参考',
+            text: '相关 API',
+            link: '/zh/api-reference',
             items: [
               { text: '服务器监控', link: '/zh/Server-monitoring' },
               { text: '隐私政策 API', link: '/zh/Privacy-api' },
@@ -126,20 +142,16 @@ export default defineConfig({
             ]
           },
           {
-            text: '插件',
+            text: '可配置文件',
+            link: '/zh/configurable-files',
             items: [
-              { text: 'Boot.Codes', link: '/zh/Boot-code' },
-              { text: '留言系统', link: '/zh/Message-plugin' },
-              { text: '玩家频道', link: '/zh/Player-channel-plugin' },
-              { text: '聊天管理', link: '/zh/Chat-plugin' }
-            ]
-          },
-          {
-            text: '开发',
-            items: [
-              { text: '编写插件', link: '/zh/Writing-a-plugin' },
-              { text: 'Hello 页面', link: '/zh/Hello-page' },
-              { text: '关于项目', link: '/zh/About' }
+              { text: 'config.json', link: '/zh/Server-configuration' },
+              { text: 'AdminStrings.json', link: '/zh/configurable-files#adminstrings-json' },
+              { text: 'Pages/index.html', link: '/zh/configurable-files#pages-index-html-hello-页面' },
+              { text: 'Messages/HelloWorld.txt', link: '/zh/configurable-files#messages-helloworld-txt' },
+              { text: 'marketplace/plugins.json', link: '/zh/configurable-files#marketplace-plugins-json' },
+              { text: 'bans.json', link: '/zh/configurable-files#bans-json' },
+              { text: 'player_stats.json', link: '/zh/configurable-files#player-stats-json' }
             ]
           }
         ],

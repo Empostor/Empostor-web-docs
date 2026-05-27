@@ -319,6 +319,84 @@ namespace Empostor.Plugins.Example
 
 预发布版 `Empostor.Api` 包 `1.2.0-ci.54` 属于 AppVeyor 上的构建 `54`，可在 https://ci.appveyor.com/project/Empostor/Empostor/build/54 找到。注意 URL 末尾的 `54`。
 
+### 国际化 (i18n)
+
+Empostor 支持通过 `IPluginLanguageProvider` 接口将插件字符串翻译为多种语言。在插件类上实现它，为命令、通知和其他用户可见文本提供翻译。
+
+```csharp
+[EmpostorPlugin("com.example.myplugin")]
+public sealed class MyPlugin : PluginBase, IPluginLanguageProvider
+{
+    public IReadOnlyDictionary<string, IReadOnlyDictionary<string, string>> GetTranslations()
+    {
+        return new Dictionary<string, IReadOnlyDictionary<string, string>>
+        {
+            ["en"] = new Dictionary<string, string>
+            {
+                ["myplugin.hello"] = "Hello, {0}!",
+                ["myplugin.goodbye"] = "Goodbye!",
+            },
+            ["zh_CN"] = new Dictionary<string, string>
+            {
+                ["myplugin.hello"] = "你好，{0}！",
+                ["myplugin.goodbye"] = "再见！",
+            },
+        };
+    }
+}
+```
+
+**支持的语言代码：**
+
+| 代码 | 语言 |
+|---|---|
+| `en` | 英语 |
+| `zh_CN` | 简体中文 |
+| `zh_TW` | 繁体中文 |
+| `ko` | 韩语 |
+| `ru` | 俄语 |
+| `de` | 德语 |
+| `fr` | 法语 |
+| `ja` | 日语 |
+| `pt` | 葡萄牙语 |
+| `pt_BR` | 巴西葡萄牙语 |
+| `es` | 西班牙语 |
+| `it` | 意大利语 |
+| `nl` | 荷兰语 |
+| `fil` | 菲律宾语 |
+| `ga` | 爱尔兰语 |
+
+**在命令中使用翻译：**
+
+```csharp
+public async ValueTask<bool> ExecuteAsync(CommandContext ctx)
+{
+    string msg = ctx.Lang.Get("myplugin.hello", ctx.SenderLanguage)
+        .Replace("{0}", ctx.Sender.Client.Name);
+
+    await ctx.PlayerControl.SendChatToPlayerAsync(msg, ctx.PlayerControl);
+}
+```
+
+**LanguageString API：**
+
+```csharp
+var str = ctx.Lang.Get("key", lang);
+
+str.Replace("{Name}", value)              // 替换单个占位符
+str.ReplaceAll(("{0}", a), ("{1}", b))    // 替换多个占位符
+str.Format(args)                          // string.Format 风格
+str.Get()                                 // 获取原始字符串
+```
+
+**最佳实践：**
+- 始终提供英语 (`en`) 作为回退 — 当玩家的语言未找到时使用。
+- 使用命名空间化的翻译键：`插件名.键名`。
+- 使用 `{0}`、`{1}` 作为位置占位符。
+- 在插件类上注册 `IPluginLanguageProvider` — 翻译将在启动时自动加载。
+
+关于基于文本文件的消息（如 Welcome 插件的 `HelloWorld.txt`），请参阅[可配置文件](configurable-files.md#messages-helloworld-txt)。
+
 ## 9. 缺少/无效数据或需要更多功能？
 
 `Empostor.Api` 目前处于测试阶段。还有很多功能尚未完善，我们希望能听到你在开发插件时需要的功能。
