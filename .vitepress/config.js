@@ -65,7 +65,8 @@ export default defineConfig({
             items: [
               { text: 'Server Monitoring', link: '/Server-monitoring' },
               { text: 'Privacy Policy API', link: '/Privacy-api' },
-              { text: 'Game Listing API', link: '/Game-api' }
+              { text: 'Game Listing API', link: '/Game-api' },
+              { text: 'Verification API', link: '/api-reference#verification-api' }
             ]
           },
           {
@@ -150,7 +151,8 @@ export default defineConfig({
             items: [
               { text: '服务器监控', link: '/zh/Server-monitoring' },
               { text: '隐私政策 API', link: '/zh/Privacy-api' },
-              { text: '游戏列表 API', link: '/zh/Game-api' }
+              { text: '游戏列表 API', link: '/zh/Game-api' },
+              { text: '验证 API', link: '/zh/api-reference#验证-api' }
             ]
           },
           {
