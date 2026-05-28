@@ -308,6 +308,8 @@ The GitHub repository checked is `Empostor/Empostor` by default. If you maintain
 
 ## Reports
 
+![Report Player](/images/report_player.jpg)
+
 Shows the last 200 player reports submitted in-game (via the Among Us report button):
 
 | Column | Description |

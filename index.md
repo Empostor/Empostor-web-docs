@@ -21,10 +21,19 @@ features:
       src: /favicon.png
     title: Configure Server
     details: |
-      Everything you need to set up and manage your Empostor server.
-      Covers installation, configuration, admin panel, features, and troubleshooting.
+      Learn how to install, configure, and run your Empostor server.
+      Covers installation, configuration, reverse proxy setup, upgrading, and troubleshooting.
     link: /configure-server
     linkText: Server Docs
+
+  - icon:
+      src: /favicon.png
+    title: Detailed Features
+    details: |
+      Explore Empostor's advanced built-in features.
+      Admin panel, chat filtering, Discord webhooks, player statistics, and plugin marketplace.
+    link: /detailed-features
+    linkText: Feature Docs
 
   - icon:
       src: /favicon.png
@@ -52,4 +61,13 @@ features:
       HelloWorld.txt, AdminStrings.json, config.json, Pages/index.html, plugins.json, and more.
     link: /configurable-files
     linkText: File Reference
+
+  - icon:
+      src: /favicon.png
+    title: About
+    details: |
+      The story behind Empostor, project origins, contributors, and license.
+      Learn about the referenced projects that Empostor builds upon.
+    link: /About
+    linkText: About Empostor
 ---

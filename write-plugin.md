@@ -52,8 +52,3 @@ The **[Plugin Marketplace](Admin-panel.md#plugin-marketplace)** allows server ad
 - Minimum Empostor version requirements
 - Multi-version support with version picker in the admin UI
 
----
-
-## About the Project
-
-**[About](About.md)** — The story behind Empostor, project origins, and contributors.

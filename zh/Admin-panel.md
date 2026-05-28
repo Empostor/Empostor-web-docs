@@ -308,6 +308,8 @@ Empostor 内置基于 Web 的管理面板，可通过 `http://your-server:22023/
 
 ## 举报
 
+![举报玩家](/images/report_player.jpg)
+
 显示最近 200 条玩家在游戏中提交的举报（通过 Among Us 举报按钮）：
 
 | 列 | 描述 |

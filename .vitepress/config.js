@@ -32,14 +32,19 @@ export default defineConfig({
               { text: 'Server Configuration', link: '/Server-configuration' },
               { text: 'Building from Source', link: '/Building-from-source' },
               { text: 'HTTP Server (Reverse Proxy)', link: '/Http-server' },
-              { text: 'Upgrading', link: '/Upgrading' },
+              { text: 'FAQ', link: '/FAQ' },
+              { text: 'Troubleshooting', link: '/TROUBLESHOOTING' }
+            ]
+          },
+          {
+            text: 'Detailed Features',
+            link: '/detailed-features',
+            items: [
               { text: 'Admin Panel', link: '/Admin-panel' },
               { text: 'Chat Filter', link: '/Admin-panel#chat-filter' },
               { text: 'Discord Webhook', link: '/Discord-webhook' },
               { text: 'Statistics', link: '/Admin-panel#statistics' },
-              { text: 'Plugin Marketplace', link: '/Admin-panel#plugin-marketplace' },
-              { text: 'FAQ', link: '/FAQ' },
-              { text: 'Troubleshooting', link: '/TROUBLESHOOTING' }
+              { text: 'Plugin Marketplace', link: '/Admin-panel#plugin-marketplace' }
             ]
           },
           {
@@ -51,8 +56,7 @@ export default defineConfig({
               { text: 'Boot.Codes', link: '/Boot-code' },
               { text: 'Message (Leave a Message)', link: '/Message-plugin' },
               { text: 'Player Channel', link: '/Player-channel-plugin' },
-              { text: 'Chat Manager', link: '/Chat-plugin' },
-              { text: 'About', link: '/About' }
+              { text: 'Chat Manager', link: '/Chat-plugin' }
             ]
           },
           {
@@ -76,6 +80,10 @@ export default defineConfig({
               { text: 'bans.json', link: '/configurable-files#bans-json' },
               { text: 'player_stats.json', link: '/configurable-files#player-stats-json' }
             ]
+          },
+          {
+            text: 'About',
+            link: '/About'
           }
         ],
 
@@ -109,14 +117,19 @@ export default defineConfig({
               { text: '服务器配置', link: '/zh/Server-configuration' },
               { text: '从源码构建', link: '/zh/Building-from-source' },
               { text: 'HTTP 服务器 (反向代理)', link: '/zh/Http-server' },
-              { text: '升级指南', link: '/zh/Upgrading' },
+              { text: '常见问题', link: '/zh/FAQ' },
+              { text: '故障排除', link: '/zh/TROUBLESHOOTING' }
+            ]
+          },
+          {
+            text: '详细功能',
+            link: '/zh/detailed-features',
+            items: [
               { text: '管理面板', link: '/zh/Admin-panel' },
               { text: '聊天过滤', link: '/zh/Admin-panel#聊天过滤' },
               { text: 'Discord 通知', link: '/zh/Discord-webhook' },
               { text: '统计', link: '/zh/Admin-panel#统计' },
-              { text: '插件市场', link: '/zh/Admin-panel#插件市场' },
-              { text: '常见问题', link: '/zh/FAQ' },
-              { text: '故障排除', link: '/zh/TROUBLESHOOTING' }
+              { text: '插件市场', link: '/zh/Admin-panel#插件市场' }
             ]
           },
           {
@@ -128,8 +141,7 @@ export default defineConfig({
               { text: 'Boot.Codes', link: '/zh/Boot-code' },
               { text: '留言系统', link: '/zh/Message-plugin' },
               { text: '玩家频道', link: '/zh/Player-channel-plugin' },
-              { text: '聊天管理', link: '/zh/Chat-plugin' },
-              { text: '关于项目', link: '/zh/About' }
+              { text: '聊天管理', link: '/zh/Chat-plugin' }
             ]
           },
           {
@@ -153,6 +165,10 @@ export default defineConfig({
               { text: 'bans.json', link: '/zh/configurable-files#bans-json' },
               { text: 'player_stats.json', link: '/zh/configurable-files#player-stats-json' }
             ]
+          },
+          {
+            text: '关于',
+            link: '/zh/About'
           }
         ],
 
